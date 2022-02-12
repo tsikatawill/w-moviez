@@ -1,7 +1,7 @@
 import React from "react";
 import DP from "../images/userDP.png";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
