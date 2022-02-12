@@ -1,10 +1,10 @@
+import React from "react";
+import MovieList from "./components/MovieList";
+
 function App() {
   return (
     <div className="App">
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-        blanditiis?
-      </p>
+      <MovieList />
     </div>
   );
 }
