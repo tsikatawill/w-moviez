@@ -21,6 +21,7 @@ const About = () => {
                 <div className="socials d-flex mt-2">
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://www.linkedin.com/in/william-tsikata-294916192?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B4oZwOjZxSi6Sarso9oqvxw%3D%3D"
                     className="mx-1"
                   >
@@ -28,6 +29,7 @@ const About = () => {
                   </a>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://github.com/tsikatawill"
                     className="mx-1"
                   >
@@ -35,6 +37,7 @@ const About = () => {
                   </a>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://www.linkedin.com/in/william-tsikata-294916192?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B4oZwOjZxSi6Sarso9oqvxw%3D%3D"
                     className="mx-1"
                   >
@@ -42,6 +45,7 @@ const About = () => {
                   </a>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://twitter.com/tsikatawill"
                     className="mx-1"
                   >
