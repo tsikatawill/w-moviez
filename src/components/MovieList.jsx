@@ -11,28 +11,25 @@ const MovieList = () => {
   const TMDB_TOKEN = process.env.REACT_APP_TMDB_TOKEN;
 
   useEffect(() => {
-    getMovies();
-  }, []);
-
-  const getMovies = async () => {
-    setLoading(true);
-    const response = await fetch(
-      `${TMDB_URL}/discover/movie?api_key=${TMDB_TOKEN}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`,
-      {
-        headers: {
-          Authorization: `token ${TMDB_TOKEN}`,
-        },
+    const getMovies = async () => {
+      setLoading(true);
+      const response = await fetch(
+        `${TMDB_URL}/discover/movie?api_key=${TMDB_TOKEN}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`,
+        {
+          headers: {
+            Authorization: `token ${TMDB_TOKEN}`,
+          },
+        }
+      );
+      const data = await response.json();
+      if (data) {
+        setMovies(data.results);
       }
-    );
+      setLoading(false);
+    };
 
-    const data = await response.json();
-
-    if (data) {
-      console.log(data.results);
-      setMovies(data.results);
-    }
-    setLoading(false);
-  };
+    getMovies();
+  }, [TMDB_TOKEN, TMDB_URL]);
 
   return (
     <section className="movie-list">
