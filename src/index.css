@@ -19,12 +19,12 @@ ul {
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.18);
   transition: all 0.2s ease-in;
 }
 
 .movie-card:hover {
-  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 .movie-card img {

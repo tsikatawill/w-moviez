@@ -7,8 +7,8 @@ const MovieList = () => {
   const [movies, setMovies] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
 
-  const TMDB_URL = "https://api.themoviedb.org/3";
-  const TMDB_TOKEN = "f634f1397ed279619c599ead3e78b65c";
+  const TMDB_URL = process.env.REACT_APP_TMDB_URL;
+  const TMDB_TOKEN = process.env.REACT_APP_TMDB_TOKEN;
 
   useEffect(() => {
     getMovies();
