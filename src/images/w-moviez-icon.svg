@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+	<title>New Project</title>
+	<style>
+		.s0 { fill: #000000;stroke: #ff9d00;stroke-width: 18 } 
+		.s1 { fill: #ff9d00 } 
+	</style>
+	<path id="circle" class="s0" d="m249.5 490.6c-132.8 0-240.1-107.3-240.1-240.1c0-132.8 107.3-240.1 240.1-240.1c132.8 0 240.1 107.3 240.1 240.1c0 132.8-107.3 240.1-240.1 240.1z" />
+	<path id="play_icon" class="s1" d="m409 250.1l-256.5 148.2v-296.3z" />
+</svg>
