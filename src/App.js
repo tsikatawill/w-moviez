@@ -1,11 +1,14 @@
 import React from "react";
-import MovieList from "./components/MovieList";
-// import MovieLists from "./components/MovieLists";
+import PopularMovies from "./components/PopularMovies";
+import RRatedMovies from "./components/RRatedMovies";
+import SciFiMovies from "./components/SciFiMovies";
 
 function App() {
   return (
     <div className="App">
-      <MovieList movie_category="rRatedMovies" />
+      <PopularMovies />
+      <RRatedMovies />
+      <SciFiMovies />
     </div>
   );
 }

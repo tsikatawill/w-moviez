@@ -1,53 +1,33 @@
-import React, { useContext, useEffect, useState } from "react";
-import { MoviesContext } from "./context/MoviesContext";
+import React from "react";
+import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
 
-const MovieList = ({ movie_category }) => {
-  const { rRatedMovies, popularMovies, loading } = useContext(MoviesContext);
-  const [sectionTitle, setSectionTitle] = useState("Movies category");
-  const [selectedMovies, setSelectedMovies] = useState([]);
-
-  useEffect(() => {
-    const setMovieCategory = (movie_category) => {
-      if (movie_category === "rRatedMovies") {
-        setSectionTitle("R-Rated");
-        setSelectedMovies(rRatedMovies);
-      } else if (movie_category === "popularMovies") {
-        setSectionTitle("Popular");
-        setSelectedMovies(popularMovies);
-      } else {
-        setSectionTitle("Movies category");
-        setSelectedMovies([]);
-      }
-    };
-
-    setMovieCategory();
-  }, [popularMovies, rRatedMovies]);
-
+const MovieList = ({ movies, category }) => {
   return (
     <section className="movie-list">
       <div className="container  py-5">
-        <h2 className="fw-bold ">{sectionTitle}</h2>
-        {loading ? (
-          <p>Loading ...</p>
-        ) : (
-          <ul className="movie-list-items">
-            {selectedMovies.map((movie) => {
-              return (
-                <li className="movie-list-item" key={movie.id}>
-                  <MovieCard
-                    imgLink={`http://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                    title={movie.title}
-                    vote_average={movie.vote_average}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        )}
+        <h2 className="fw-bold">{category}</h2>
+        <ul className="movie-list-items">
+          {movies.map((movie) => (
+            <li className="movie-list-item" key={movie.id}>
+              <Link to={`/movie/${movie.id}`}>
+                <MovieCard
+                  title={movie.title}
+                  vote_average={movie.vote_average}
+                  imgLink={movie.poster_path}
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
+};
+
+MovieList.defaultProps = {
+  movies: [],
+  category: "Category",
 };
 
 export default MovieList;

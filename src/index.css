@@ -29,6 +29,7 @@ ul {
 
 .movie-card img {
   width: 100%;
+  min-height: 350px;
 }
 
 ul.movie-list-items {
