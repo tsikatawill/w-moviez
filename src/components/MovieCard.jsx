@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const MovieCard = ({ imgLink, title, vote_average }) => {
+const MovieCard = ({ imgLink, title, vote_average, style }) => {
   const [ratingBg, setRatingBg] = React.useState("");
   useEffect(() => {
     const handleBg = (vote_average) => {
@@ -16,7 +16,7 @@ const MovieCard = ({ imgLink, title, vote_average }) => {
   }, [vote_average]);
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" style={style}>
       <img
         src={`${
           imgLink
