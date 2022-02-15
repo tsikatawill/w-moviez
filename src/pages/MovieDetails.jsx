@@ -50,7 +50,7 @@ const MovieDetails = () => {
                 "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7), black, black, black, black)",
             }}
           >
-            <div className="container d-flex align-items-center justify-content-between">
+            <div className="container d-sm-flex align-items-center justify-content-between">
               <div className="text" style={{ maxWidth: "600px" }}>
                 <h1 className="fw-bold">{movie.title}</h1>
                 <div className="genres my-2">
@@ -63,7 +63,7 @@ const MovieDetails = () => {
                 </div>
                 <p>{movie.overview}</p>
               </div>
-              <div className="image">
+              <div className="image d-none d-sm-block">
                 <MovieCard
                   imgLink={
                     movie.poster_path
