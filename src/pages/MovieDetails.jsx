@@ -12,7 +12,6 @@ const MovieDetails = () => {
       const data = await response.json();
 
       data && setMovie(data);
-      console.log(data);
     };
 
     getMovieDetails();
@@ -20,15 +19,22 @@ const MovieDetails = () => {
   return (
     <div>
       <div className="container py-5">
-        <h1>{movie.title}</h1>
-        <div className="genres my-2">
-          {movie.genres.map((genre) => (
-            <span className="bg-secondary p-1 mx-1 text-white" key={genre.id}>
-              {genre.name}
-            </span>
-          ))}
-        </div>
-        <p>{movie.overview}</p>
+        {movie && (
+          <>
+            <h1>{movie.title}</h1>
+            <div className="genres my-2">
+              {movie.genres.map((genre) => (
+                <span
+                  className="bg-secondary p-1 mx-1 text-white"
+                  key={genre.id}
+                >
+                  {genre.name}
+                </span>
+              ))}
+            </div>
+            <p>{movie.overview}</p>
+          </>
+        )}
       </div>
     </div>
   );
