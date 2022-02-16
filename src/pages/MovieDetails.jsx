@@ -148,9 +148,10 @@ const MovieDetails = () => {
               </h2>
               <h4 className="fw-bold">Budget</h4>
               <p>
-                Did you know this movie had a bugdet of $
+                Did you know this movie had a bugdet of <span>$</span>
                 {Intl.NumberFormat("en-US").format(movie.budget)} and grossed
-                about
+                about <span>$</span>
+                {Intl.NumberFormat("en-US").format(movie.revenue)}
               </p>
               <h4 className="fw-bold">Collection</h4>
               <p>

@@ -59,7 +59,6 @@ ul.movie-list-items li:not(:first-child) {
 
 .search-form .search-icon-wrapper {
   position: absolute;
-  border: 1px solid red !important;
   right: 0;
 }
 
