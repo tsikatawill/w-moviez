@@ -27,7 +27,7 @@ const UpcomingMovies = () => {
     <section className="popular-movies">
       {loading ? (
         <div className="container mt-5">
-          <h2 className="fw-bold">Popular</h2>
+          <h2 className="fw-bold">Upcoming</h2>
           <Spinner />
         </div>
       ) : (
