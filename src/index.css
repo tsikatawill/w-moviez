@@ -53,13 +53,14 @@ ul.movie-list-items li:not(:first-child) {
   margin: 0;
 }
 
-.search-form .input-group {
+.search-form .input-grop {
   position: relative;
 }
 
 .search-form .search-icon-wrapper {
   position: absolute;
-  right: 7px;
+  border: 1px solid red !important;
+  right: 0;
 }
 
 @media screen and (max-width: 769px) {

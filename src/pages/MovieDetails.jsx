@@ -6,6 +6,7 @@ import MovieCard from "../components/MovieCard";
 const MovieDetails = () => {
   const movieID = useParams().id;
   const [movie, setMovie] = useState({});
+  const [cast, setCast] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getMovieDetails = async () => {
@@ -22,6 +23,19 @@ const MovieDetails = () => {
     };
 
     getMovieDetails();
+  }, [movieID]);
+
+  useEffect(() => {
+    const getCast = async () => {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${movieID}/credits?api_key=${process.env.REACT_APP_TMDB_TOKEN}`
+      );
+      const data = await response.json();
+
+      setCast(data.cast.slice(0, 20));
+    };
+
+    getCast();
   }, [movieID]);
   return (
     <>
@@ -60,7 +74,7 @@ const MovieDetails = () => {
                 className="container d-sm-flex align-items-center justify-content-between"
                 style={{ maxWidth: "1000px", margin: "auto" }}
               >
-                <div className="text" style={{ maxWidth: "600px" }}>
+                <div className="text" style={{ maxWidth: "550px" }}>
                   <h1 className="fw-bold">{movie.title}</h1>
                   <div className="genres my-2">
                     {movie.genres &&
@@ -70,7 +84,47 @@ const MovieDetails = () => {
                         </span>
                       ))}
                   </div>
-                  <p>{movie.overview}</p>
+                  <p style={{ maxWidth: "90%" }}>{movie.overview}</p>
+                  <div className="cast">
+                    <h3 className="fw-bold">Cast</h3>
+                    <div
+                      className="d-flex"
+                      style={{ overflowX: "scroll", width: "90%" }}
+                    >
+                      {cast.length > 0 ? (
+                        cast.map((item) => {
+                          return (
+                            <a
+                              href={`https://google.com/search?q=${item.name}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <div
+                                className="cast-card mx-2"
+                                key={item.cast_id}
+                              >
+                                <div className="image-wrapper">
+                                  <img
+                                    src={
+                                      process.env.REACT_APP_TMDB_IMAGE_URL +
+                                      item.profile_path
+                                    }
+                                    alt=""
+                                    width="70px"
+                                  />
+                                </div>
+                                <small style={{ textAlign: "center" }}>
+                                  {item.name}
+                                </small>
+                              </div>
+                            </a>
+                          );
+                        })
+                      ) : (
+                        <></>
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <div className="image d-none d-sm-block">
                   <MovieCard
@@ -85,6 +139,37 @@ const MovieDetails = () => {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="some-text">
+            <div className="container py-5">
+              <h2 className="fw-bold">
+                Some interesting facts about this movie
+              </h2>
+              <h4 className="fw-bold">Budget</h4>
+              <p>
+                Did you know this movie had a bugdet of $
+                {Intl.NumberFormat("en-US").format(movie.budget)} and grossed
+                about
+              </p>
+              <h4 className="fw-bold">Collection</h4>
+              <p>
+                This movie belongs to the collection{" "}
+                {movie.belongs_to_collection &&
+                  movie.belongs_to_collection.name}
+              </p>
+              <h4 className="fw-bold">Homepage</h4>
+              <p>
+                Checkout the official website{" "}
+                <a
+                  href={movie.homepage && movie.homepage}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  here
+                </a>{" "}
+              </p>
             </div>
           </div>
         </section>

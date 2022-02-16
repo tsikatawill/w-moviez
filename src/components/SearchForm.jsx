@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-const SearchForm = () => {
+const SearchForm = ({ className }) => {
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <form
@@ -13,9 +13,9 @@ const SearchForm = () => {
           );
         }
       }}
-      className="form search-form"
+      className={`form search-form ${className}`}
     >
-      <div className="input-group">
+      <div className="input-grop">
         <button
           type="submit"
           htmlFor="search_input"

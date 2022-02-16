@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchForm from "./SearchForm";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-dark text-white py-5">
-      <div className="container d-sm-flex text-sm-start text-center justify-content-between align-items-center">
+    <footer className="footer bg-black text-white py-2">
+      <div className="container d-sm-flex pt-5 text-sm-start text-center justify-content-between align-items-center">
         <Link
           to="/"
           className="logo text-decoration-none text-white h3 fw-bold"
@@ -20,7 +19,6 @@ const Footer = () => {
             About
           </Link>
         </div>
-        <SearchForm />
       </div>
       <div className="text-center my-5">Copyright &copy;2022</div>
     </footer>

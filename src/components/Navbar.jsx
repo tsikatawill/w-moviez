@@ -5,14 +5,14 @@ import SearchForm from "./SearchForm";
 const Navbar = () => {
   return (
     <nav className="navbar bg-dark text-light">
-      <div className="container">
+      <div className="container py-2">
         <Link
           to="/"
           className="logo text-decoration-none text-white h3 fw-bold"
         >
           W-<span className="text-warning">Moviez</span>
         </Link>
-        <div className="nav-menu">
+        <div className="nav-menu ">
           <Link to="/" className="mx-2 text-decoration-none text-light">
             Home
           </Link>
@@ -20,7 +20,7 @@ const Navbar = () => {
             About
           </Link>
         </div>
-        <SearchForm />
+        <SearchForm className="bg-danger" />
       </div>
     </nav>
   );
