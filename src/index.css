@@ -44,3 +44,7 @@ ul.movie-list-items li {
 ul.movie-list-items li:not(:first-child) {
   margin-left: 1rem;
 }
+
+.debug {
+  border: 1px solid red;
+}

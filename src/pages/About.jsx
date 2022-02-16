@@ -1,7 +1,6 @@
 import React from "react";
 import DP from "../images/userDP.png";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -78,38 +77,46 @@ const About = () => {
           </div>
           <aside className="col-md-4">
             <h4 className="fw-bold">Check out some of my other projects</h4>
-            <div className="list-group">
-              <Link
-                to="https://dudey-ai.netlify.app"
+            <ul className="list-group">
+              <a
                 className="list-group-item"
-                children="AI"
-              />
-              <Link
-                to="https://ez-contacts.netlify.app"
+                href="https://dudey-ai.netlify.app"
+              >
+                Dudey AI
+              </a>
+
+              <a
                 className="list-group-item"
-                children="Contacts"
-              />
-              <Link
-                to="https://linearr.netlify.app"
+                href="https://ez-contacts.netlify.app"
+              >
+                EZ Contacts
+              </a>
+
+              <a className="list-group-item" href="https://linearr.netlify.app">
+                Linearr
+              </a>
+
+              <a
                 className="list-group-item"
-                children="Linear"
-              />
-              <Link
-                to="https://webuiild.netlify.app"
+                href="https://webuiild.netlify.app"
+              >
+                WeBuild
+              </a>
+
+              <a
                 className="list-group-item"
-                children="WeBuild"
-              />
-              <Link
-                to="https://cryptobaase.netlify.app"
+                href="https://cryptobaase.netlify.app"
+              >
+                Cryptobaase
+              </a>
+
+              <a
                 className="list-group-item"
-                children="Cryptobaase"
-              />
-              <Link
-                to="https://feedbackk-app.netlify.app"
-                className="list-group-item"
-                children="app"
-              />
-            </div>
+                href="https://feedbackk-app.netlify.app"
+              >
+                Feedback app
+              </a>
+            </ul>
           </aside>
         </div>
       </div>

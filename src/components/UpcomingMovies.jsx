@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import MovieList from "../components/MovieList";
-import Spinner from "../components/Spinner";
+import MovieList from "./MovieList";
+import Spinner from "./Spinner";
 
-const SciFiMovies = () => {
+const UpcomingMovies = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getPopularMovies = async () => {
       setLoading(true);
       const response = await fetch(
-        `${process.env.REACT_APP_TMDB_URL}/discover/movie?api_key=${process.env.REACT_APP_TMDB_TOKEN}&with_genres=878&sort_by=popularity.desc`,
+        `${process.env.REACT_APP_TMDB_URL}/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_TOKEN}&sort_by=popularity.desc`,
         {
           headers: {
             Authorization: `token ${process.env.TMDB_TOKEN}`,
@@ -27,14 +27,14 @@ const SciFiMovies = () => {
     <section className="popular-movies">
       {loading ? (
         <div className="container mt-5">
-          <h2 className="fw-bold">Sci-Fi</h2>
+          <h2 className="fw-bold">Popular</h2>
           <Spinner />
         </div>
       ) : (
-        <MovieList movies={movies} category="Sci-Fi" />
+        <MovieList movies={movies} category="Upcoming" />
       )}
     </section>
   );
 };
 
-export default SciFiMovies;
+export default UpcomingMovies;

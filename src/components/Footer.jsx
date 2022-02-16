@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchForm from "./SearchForm";
 
-const Navbar = () => {
+const Footer = () => {
   return (
-    <nav className="navbar bg-dark text-light">
-      <div className="container">
+    <footer className="footer bg-dark text-white py-5">
+      <div className="container d-sm-flex text-sm-start text-center justify-content-between align-items-center">
         <Link
           to="/"
           className="logo text-decoration-none text-white h3 fw-bold"
@@ -22,8 +22,9 @@ const Navbar = () => {
         </div>
         <SearchForm />
       </div>
-    </nav>
+      <div className="text-center my-5">Copyright &copy;2022</div>
+    </footer>
   );
 };
 
-export default Navbar;
+export default Footer;

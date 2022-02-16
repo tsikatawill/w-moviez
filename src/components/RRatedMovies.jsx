@@ -25,7 +25,14 @@ const RRatedMovies = () => {
   }, []);
   return (
     <section className="popular-movies">
-      {loading ? <Spinner /> : <MovieList movies={movies} category="R-Rated" />}
+      {loading ? (
+        <div className="container mt-5">
+          <h2 className="fw-bold">R-Rated</h2>
+          <Spinner />
+        </div>
+      ) : (
+        <MovieList movies={movies} category="R-Rated" />
+      )}
     </section>
   );
 };
