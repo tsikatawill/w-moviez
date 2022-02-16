@@ -48,3 +48,26 @@ ul.movie-list-items li:not(:first-child) {
 .debug {
   border: 1px solid red;
 }
+
+.logo {
+  margin: 0;
+}
+
+.search-form .input-group {
+  position: relative;
+}
+
+.search-form .search-icon-wrapper {
+  position: absolute;
+  right: 7px;
+}
+
+@media screen and (max-width: 769px) {
+  section.movie-detail .detail-card {
+    bottom: 0 !important;
+  }
+
+  section.movie-detail .hero {
+    margin-bottom: 100px !important;
+  }
+}

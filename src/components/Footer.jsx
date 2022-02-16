@@ -12,7 +12,7 @@ const Footer = () => {
         >
           W-<span className="text-warning">Moviez</span>
         </Link>
-        <div className="nav-menu">
+        <div className="nav-menu my-3 my-sm-0">
           <Link to="/" className="mx-2 text-decoration-none text-light">
             Home
           </Link>
