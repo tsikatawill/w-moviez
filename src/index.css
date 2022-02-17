@@ -9,6 +9,12 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+div#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -65,6 +71,10 @@ ul.movie-list-items li:not(:first-child) {
 .search-form .search-icon-wrapper {
   position: absolute;
   right: 0;
+}
+
+footer {
+  margin-top: auto;
 }
 
 @media screen and (max-width: 769px) {
