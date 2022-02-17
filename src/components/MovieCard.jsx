@@ -27,7 +27,9 @@ const MovieCard = ({ imgLink, title, vote_average, style }) => {
       />
       <div
         className="text bg-black text-white d-flex justify-content-between align-items-center p-2"
-        style={{ borderRadius: "10px", transform: "translateY(-10px)" }}
+        style={{
+          borderRadius: " 0 0 10px 10px",
+        }}
       >
         <p className="p-0 m-0">{title}</p>
         <span className="px-1"></span>
