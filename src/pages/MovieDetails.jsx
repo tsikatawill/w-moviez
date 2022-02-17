@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
 import MovieCard from "../components/MovieCard";
+import castImgPlaceholder from "../images/user-dp.png";
 
 const MovieDetails = () => {
   const movieID = useParams().id;
@@ -53,7 +54,7 @@ const MovieDetails = () => {
                     movie.backdrop_path
                   : "https://media.istockphoto.com/vectors/popcorn-box-3d-cinema-glasses-and-clapper-board-on-the-film-strip-vector-id1179553332?k=20&m=1179553332&s=170667a&w=0&h=a55Js1iWKdtAg7Ot34QSlUmLpbGGeO_Bdw_8mLxci9c="
               }) center center/cover no-repeat`,
-              minHeight: "500px",
+              minHeight: "600px",
               position: "relative",
               marginBottom: "200px",
             }}
@@ -98,19 +99,26 @@ const MovieDetails = () => {
                               href={`https://google.com/search?q=${item.name}`}
                               target="_blank"
                               rel="noreferrer"
+                              key={item.cast_id}
                             >
-                              <div
-                                className="cast-card mx-2"
-                                key={item.cast_id}
-                              >
-                                <div className="image-wrapper">
+                              <div className="cast-card mx-2">
+                                <div
+                                  className="image-wrapper"
+                                  style={{
+                                    borderRadius: "5px",
+                                    overflow: "hidden",
+                                  }}
+                                >
                                   <img
                                     src={
-                                      process.env.REACT_APP_TMDB_IMAGE_URL +
                                       item.profile_path
+                                        ? process.env.REACT_APP_TMDB_IMAGE_URL +
+                                          item.profile_path
+                                        : castImgPlaceholder
                                     }
                                     alt=""
                                     width="70px"
+                                    height="100"
                                   />
                                 </div>
                                 <small style={{ textAlign: "center" }}>

@@ -5,7 +5,7 @@ import MovieCard from "./MovieCard";
 const MovieList = ({ movies, category }) => {
   return (
     <section className="movie-list">
-      <div className="container  py-5">
+      <div className="container  py-3">
         <h2 className="fw-bold">{category}</h2>
         <ul className="movie-list-items">
           {movies.map((movie) => (

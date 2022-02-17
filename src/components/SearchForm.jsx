@@ -30,7 +30,13 @@ const SearchForm = () => {
           value={searchQuery}
           name={searchQuery}
           placeholder="Search movie"
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => {
+            if (e.target.value.trim().length < 1) {
+              setSearchQuery("");
+            } else {
+              setSearchQuery(e.target.value);
+            }
+          }}
           className="px-2 py-1 bg-black text-white"
           style={{
             borderRadius: "5px",

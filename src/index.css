@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -15,7 +20,7 @@ ul {
 }
 
 .movie-card {
-  width: 250px;
+  width: 200px;
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -29,16 +34,16 @@ ul {
 
 .movie-card img {
   width: 100%;
-  min-height: 350px;
+  min-height: 250px;
+}
+
+.movie-card .text {
+  height: 60px;
 }
 
 ul.movie-list-items {
   display: flex;
   overflow-x: auto;
-}
-
-ul.movie-list-items li {
-  width: 300px;
 }
 
 ul.movie-list-items li:not(:first-child) {
@@ -69,5 +74,9 @@ ul.movie-list-items li:not(:first-child) {
 
   section.movie-detail .hero {
     margin-bottom: 100px !important;
+  }
+
+  section.movie-detail .text {
+    width: 100% !important;
   }
 }

@@ -55,23 +55,15 @@ const About = () => {
             </div>
             <div className="about-site">
               <p className="lead">
-                This website was created Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Asperiores eveniet minus delectus laboriosam
-                incidunt molestiae. Enim, saepe repellendus mollitia sed dolorem
-                distinctio omnis reiciendis eius incidunt temporibus. Quo, optio
-                natus....
+                This website was created around the TMDB API. It makes use of
+                API calls to fetch popular movies, Sci-Fi, best R-Rated Movies
+                and allows users to get details on their favourite movies using
+                the search functionality.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-                exercitationem assumenda, dignissimos tempore doloremque
-                dolores, possimus ea quas maxime officia, iste voluptatem
-                corporis. Nostrum atque, officia soluta doloremque vitae ab?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae exercitationem ad aut nisi unde dolore nemo dolorem
-                quia tenetur est, odit sit nesciunt ipsam perferendis inventore
-                maiores iure id quos?
+                This project was built in hopes of allowing users to
+                effortlessly get movie details and dazzles users with a
+                beautiful UI.
               </p>
             </div>
           </div>
@@ -80,6 +72,8 @@ const About = () => {
             <ul className="list-group">
               <a
                 className="list-group-item"
+                target="_blank"
+                rel="noreferrer"
                 href="https://dudey-ai.netlify.app"
               >
                 Dudey AI
@@ -87,17 +81,26 @@ const About = () => {
 
               <a
                 className="list-group-item"
+                target="_blank"
+                rel="noreferrer"
                 href="https://ez-contacts.netlify.app"
               >
                 EZ Contacts
               </a>
 
-              <a className="list-group-item" href="https://linearr.netlify.app">
+              <a
+                className="list-group-item"
+                target="_blank"
+                rel="noreferrer"
+                href="https://linearr.netlify.app"
+              >
                 Linearr
               </a>
 
               <a
                 className="list-group-item"
+                target="_blank"
+                rel="noreferrer"
                 href="https://webuiild.netlify.app"
               >
                 WeBuild
@@ -105,6 +108,8 @@ const About = () => {
 
               <a
                 className="list-group-item"
+                target="_blank"
+                rel="noreferrer"
                 href="https://cryptobaase.netlify.app"
               >
                 Cryptobaase
@@ -112,6 +117,8 @@ const About = () => {
 
               <a
                 className="list-group-item"
+                target="_blank"
+                rel="noreferrer"
                 href="https://feedbackk-app.netlify.app"
               >
                 Feedback app

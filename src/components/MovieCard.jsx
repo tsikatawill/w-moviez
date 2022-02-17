@@ -30,6 +30,7 @@ const MovieCard = ({ imgLink, title, vote_average, style }) => {
         style={{ borderRadius: "10px", transform: "translateY(-10px)" }}
       >
         <p className="p-0 m-0">{title}</p>
+        <span className="px-1"></span>
         <span
           className={`fw-bold p-1 bg-${ratingBg}  m-0`}
           style={{ borderRadius: "3px" }}
