@@ -45,7 +45,7 @@ const About = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://twitter.com/tsikatawill"
+                    href="https://twitter.com/dev_willman"
                     className="mx-1"
                   >
                     <FaTwitter size="25" />

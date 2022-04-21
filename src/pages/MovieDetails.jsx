@@ -149,38 +149,6 @@ const MovieDetails = () => {
               </div>
             </div>
           </div>
-          <div className="some-text">
-            <div className="container py-5">
-              <h2 className="fw-bold">
-                Some interesting facts about this movie
-              </h2>
-              <h4 className="fw-bold">Budget</h4>
-              <p>
-                Did you know this movie had a bugdet of <span>$</span>
-                {Intl.NumberFormat("en-US").format(movie.budget)} and grossed
-                about <span>$</span>
-                {Intl.NumberFormat("en-US").format(movie.revenue)}
-              </p>
-              <h4 className="fw-bold">Collection</h4>
-              <p>
-                This movie belongs to the collection{" "}
-                {movie.belongs_to_collection &&
-                  movie.belongs_to_collection.name}
-              </p>
-              <h4 className="fw-bold">Homepage</h4>
-              <p>
-                Checkout the official website{" "}
-                <a
-                  href={movie.homepage && movie.homepage}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  here
-                </a>{" "}
-              </p>
-            </div>
-          </div>
         </section>
       )}
     </>
